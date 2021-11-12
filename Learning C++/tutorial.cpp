@@ -8,7 +8,7 @@ int main() { // Whenever file is run, main() executes
 
     // system("pause>0"); // freeze the system
 
-    //  float annualSalary = 50000.99;
+    //  float annualSalary = 50000.99;+
     //  float monthlySalary = annualSalary / 12;
     //  cout << "Your monthly salary is " << monthlySalary << endl;
     //  cout << "test" << endl;
