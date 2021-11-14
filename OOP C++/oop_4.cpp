@@ -2,15 +2,16 @@
 #include<list>
 using namespace std;
 
-// Encapsulation
+// Inheritance
 
 // Constructor has same name as the class, does not have a return type
 class YouTubeChannel {
 private:
     string Name;
-    string OwnerName;
     int SubscribersCount;
     list<string> PublishedVideoTitles;
+protected: // Can be edited/used in derived classes
+    string OwnerName;
 
 public:
     YouTubeChannel(string name, string ownerName) {
@@ -44,15 +45,25 @@ public:
 
 };
 
-int main(){
-    YouTubeChannel channel("Zero", "Viktor");
-    channel.PublishVideo("Whoowee");
-    channel.PublishVideo("Eeee");
-    channel.PublishVideo("Roar");
-    channel.Subscribe();
-    channel.Subscribe();
-    channel.Subscribe();
-    channel.UnSubscribe();
-    channel.GetInfo();
+// Inherits YouTubeChannel class, derived class inherits from the base class
+class CookingYouTubeChannel:public YouTubeChannel {
+public:
+    CookingYouTubeChannel(string name, string ownerName): YouTubeChannel(name, ownerName){
 
-}
+    }
+
+    void Practice() {
+        cout << OwnerName << ": This user is practicing cooking videos" << endl;
+    }
+};
+
+int main(){
+    CookingYouTubeChannel channel("Bob's Burgers", "Bobert");
+    channel.PublishVideo("Apple pie");
+    channel.PublishVideo("Food that is good");
+    channel.Subscribe();
+    channel.GetInfo();
+    channel.Practice();
+
+
+};
