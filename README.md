@@ -1,5 +1,5 @@
-# Data-Structures-and-Algorithms
-Data structures and algorithms implemented in C++. 
+# C++ Learning
+Learning C++ concepts
 
 # Environment Setup
 - Use Clion
